@@ -4,14 +4,18 @@
 
 echo Current version: [version]
 
+:eval +("[version]".split(".")[0])
+env set v1 [$eval]
+:eval +("[version]".split(".")[1])
+env set v2 [$eval]
 :eval +("[version]".split(".")[2])
+env set v3 [$eval]
 
-env set version [$eval]
-env add version 1
+env add v3 1
 
-echo New version: [version]
+echo New version: [v1].[v2].[v3]
 
 :open package.json
-    -   set version = 1.0.[version]
+    -   set version = [v1].[v2].[v3]
     -   save
     -   close

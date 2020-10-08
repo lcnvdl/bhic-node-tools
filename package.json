@@ -1,0 +1,20 @@
+{
+  "name": "bhic-node-tools",
+  "version": "1.0.0",
+  "description": "Node JS tools for Bilderhic",
+  "main": "entry-point.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcnvdl/bhic-node-tools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcnvdl/bhic-node-tools/issues"
+  },
+  "homepage": "https://github.com/lcnvdl/bhic-node-tools#readme"
+}

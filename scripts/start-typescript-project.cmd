@@ -1,5 +1,5 @@
 echo Installing typescript...
-npm i --save-dev typescript tslint ts-node
+npm i --save-dev typescript eslint ts-node
 
 echo Installing mocha...
 npm i --save-dev chai mocha nyc

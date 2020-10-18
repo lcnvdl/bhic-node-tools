@@ -34,6 +34,13 @@ module.exports = ({ CommandBase, commands }) => {
         }
 
         const env = this.environment.fork();
+        if (!args[1] || args[1] === "lib") {
+          env.setVariable("types", "lib");
+        }
+        else {
+          return this.codes.invalidArguments;
+        }
+
         env.setVariable("dataDirectory", path.join(__dirname, "data"));
         const pipe = new CommandPipe(env);
         await pipe.loadFromFile(path.join(scripts, "start-typescript-project.cmd"));

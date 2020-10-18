@@ -24,7 +24,7 @@ copy [dataDirectory]/build.lib.bhic build.bhic
 :if '[type]'=='lib'
 :begin
 :open package.json
-    -   set type=lib
+    -   set types=lib
     -   set main=lib/index.js
     -   save
     -   close

@@ -35,7 +35,7 @@ module.exports = ({ CommandBase, commands }) => {
 
         const env = this.environment.fork();
         if (!args[1] || args[1] === "lib") {
-          env.setVariable("types", "lib");
+          env.setVariable("type", "lib");
         }
         else {
           return this.codes.invalidArguments;

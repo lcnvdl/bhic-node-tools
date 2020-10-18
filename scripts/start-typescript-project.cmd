@@ -7,10 +7,15 @@ npm i --save-dev chai mocha nyc
 echo Installing @types...
 npm i --save-dev @types/chai @types/mocha  @types/node
 
+mkdir scr
+mkdir tests
 
 :if '[type]'=='lib'
 :begin
+mkdir lib
 copy [dataDirectory]/build.lib.bhic build.bhic
+copy [dataDirectory]/index.lib.ts src/index.ts
+copy [dataDirectory]/tsconfig.lib.json tsconfig.json
 :end
 
 :open package.json
@@ -30,5 +35,4 @@ copy [dataDirectory]/build.lib.bhic build.bhic
     -   close
 :end
 
-mkdir tests
 copy [dataDirectory]/example.test.ts tests/example.test.ts

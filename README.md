@@ -10,4 +10,5 @@ bhic -c extension install https://github.com/lcnvdl/bhic-node-tools.git node-too
 ```bash
 bhic -c node-tools increase-version
 bhic -c node-tools increase-and-publish
+bhic -c node-tools new typescript lib
 ```

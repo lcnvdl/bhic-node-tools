@@ -7,7 +7,7 @@ npm i --save-dev chai mocha nyc
 echo Installing @types...
 npm i --save-dev @types/chai @types/mocha  @types/node
 
-mkdir scr
+mkdir src
 mkdir tests
 
 :if '[type]'=='lib'

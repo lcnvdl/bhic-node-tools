@@ -7,6 +7,10 @@ module.exports = ({ CommandBase, commands }) => {
 
   class NodeToolsCommand extends CommandBase {
     async run(args) {
+      if (!args || args.length === 0 || args[0] === "help" || args[0] === "--help" || args[0] === "-h") {
+        return this._showHelp();
+      }
+
       if (args[0] === "increase-version") {
         return await this._increaseVersion();
       }
@@ -24,6 +28,14 @@ module.exports = ({ CommandBase, commands }) => {
       }
 
       return this.codes.invalidArguments;
+    }
+
+    _showHelp() {
+      console.log("Node-Tools");
+      console.log("bhic -c node-tools increase-version");
+      console.log("bhic -c node-tools increase-and-publish");
+      console.log("bhic -c node-tools new typescript lib");
+      return this.codes.success;
     }
 
     async _newProject(args) {

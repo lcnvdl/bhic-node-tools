@@ -9,10 +9,12 @@ npm i --save-dev @types/chai @types/mocha  @types/node
 
 mkdir src
 mkdir tests
+mkdir .vscode
 
 :if '[type]'=='lib'
 :begin
 mkdir lib
+copy [dataDirectory]/launch.lib.json .vscode/launch.json
 copy [dataDirectory]/build.lib.bhic build.bhic
 copy [dataDirectory]/index.lib.ts src/index.ts
 copy [dataDirectory]/tsconfig.lib.json tsconfig.json
